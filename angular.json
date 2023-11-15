@@ -105,6 +105,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "ringoffire:build:production"
+          }
         }
       }
     }
