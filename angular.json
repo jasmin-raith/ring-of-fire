@@ -116,5 +116,7 @@
       }
     }
   },
-  "defaultProject": "ringoffire"
+  "cli": {
+    "analytics": false
+  }
 }
