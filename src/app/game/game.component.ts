@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, addDoc } from '@angular/fire/firestore';
 
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
@@ -32,6 +32,8 @@ export class GameComponent implements OnInit {
 
   newGame() {
     this.game = new Game();
+    const gamesCollection = addDoc(collection(this.firestore, 'games'), {'Hallo': 'Welt'});
+    console.log("Document written with ID: ", gamesCollection);
     }
 
   takeCard() {
