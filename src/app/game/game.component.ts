@@ -32,7 +32,7 @@ export class GameComponent implements OnInit {
 
   newGame() {
     this.game = new Game();
-    const gamesCollection = addDoc(collection(this.firestore, 'games'), {'Hallo': 'Welt'});
+    const gamesCollection = addDoc(collection(this.firestore, 'games'), {game: this.game.toJson()});
     console.log("Document written with ID: ", gamesCollection);
     }
 
