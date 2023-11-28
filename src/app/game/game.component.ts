@@ -5,6 +5,7 @@ import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game',
@@ -19,10 +20,13 @@ export class GameComponent implements OnInit {
   firestore: Firestore = inject(Firestore);
   items$: Observable<any[]> | undefined;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private route: ActivatedRoute ,public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.newGame();
+    this.route.params.subscribe((params)=>{
+      console.log('params',params)
+    })
     const gamesCollection = collection(this.firestore, 'games');
     this.items$ = collectionData(gamesCollection);
     this.items$.subscribe(games => {
