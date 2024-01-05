@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Game } from 'src/models/game';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
+import { EditPlayerComponent } from '../edit-player/edit-player.component';
 
 @Component({
   selector: 'app-game',
@@ -12,7 +13,7 @@ export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard?: string = '';
   game: Game = new Game;
-
+  
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -40,6 +41,11 @@ export class GameComponent implements OnInit {
         this.pickCardAnimation = false;
       }, 1000);
     }
+  }
+
+  editPlayer(playerId: number) {
+    console.log('Edit player', playerId)
+    const dialogRef = this.dialog.open(EditPlayerComponent);
   }
 
 

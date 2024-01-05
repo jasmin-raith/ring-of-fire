@@ -3,6 +3,7 @@ export class Game {
     public stack: string[] = [];
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
+    public player_images: any;
 
     constructor() {
         for (let i = 1; i < 14; i++) {
