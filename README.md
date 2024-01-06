@@ -1,4 +1,12 @@
-# Ringoffire
+# Ring of fire
+This is a famous drinking game. Meet online with a friend, create your player profiles and pick a card to start playing.
+Enjoy! ;)
+
+
+
+[Click here](https://ring-of-fire-tawny.vercel.app/) to play.
+
+_________
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
 
