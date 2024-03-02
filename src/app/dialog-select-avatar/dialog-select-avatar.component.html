@@ -1,1 +1,6 @@
-<p>dialog-select-avatar works!</p>
+<h1 mat-dialog-title>Select player picture</h1>
+
+<mat-dialog-content class="picture-dialog-content">
+    <img class="profile-picture" *ngFor="let picture of ['m1', 'f1', 'm2', 'f2', 'm3', 'f3']" src="/assets/img/profile/{{ picture }}.png">
+</mat-dialog-content>
+
