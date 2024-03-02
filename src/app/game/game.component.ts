@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   firestore: Firestore = inject(Firestore);
   game$: Observable<any> | undefined;
 
-  constructor(private route: ActivatedRoute ,public dialog: MatDialog) { }
+  constructor(private route: ActivatedRoute, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     /* this.newGame(); */
