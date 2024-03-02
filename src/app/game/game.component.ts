@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player.component';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { DialogSelectAvatarComponent } from '../dialog-select-avatar/dialog-select-avatar.component'; 
 
 @Component({
   selector: 'app-game',
@@ -76,7 +77,7 @@ export class GameComponent implements OnInit {
   }
 
 
-  openDialog(): void {
+  openDialogAddPlayer(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe(name => {
@@ -85,6 +86,11 @@ export class GameComponent implements OnInit {
         this.saveGame();
       }
     });
+  }
+
+  openDialogSelectAvatar(playerId: number): void {
+    console.log('Edit player', playerId)
+    const dialogRef = this.dialog.open(DialogSelectAvatarComponent);
   }
 
 
