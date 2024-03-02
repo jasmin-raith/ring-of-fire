@@ -70,3 +70,11 @@
     left: 100px;
     right: 100px;
 }
+
+app-player {
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.15);
+    }
+}
