@@ -1,5 +1,6 @@
 <app-player (click)="openDialogSelectAvatar(i)" *ngFor="let player of game.players; let i = index;" [ngStyle]="{'top.px': 100 + (i * 90)}" 
     [playerActive]="i == game.currentPlayer"
+    [image]="game.player_images[i]"
     [name]="player"
     class="player-position">
 </app-player>
