@@ -6,13 +6,14 @@
     class="player-position hide-mobile">
 </app-player>
 
-<app-player-mobile (click)="openDialogSelectAvatar(i)" *ngFor="let player of game.players; let i = index;" 
-    [ngStyle]="{'left.px': 100 + (i * 90), 'top.px': 0}" 
-    [playerActive]="i == game.currentPlayer"
-    [image]="game.player_images[i]"
-    [name]="player"
-    class="hide-desktop">
-</app-player-mobile>
+<div class="scroll-container hide-desktop">
+    <app-player-mobile (click)="openDialogSelectAvatar(i)" *ngFor="let player of game.players; let i = index;" 
+        class="hide-desktop"
+        [playerActive]="i == game.currentPlayer"
+        [image]="game.player_images[i]"
+        [name]="player">
+    </app-player-mobile>
+</div>
 
 <div class="field">
 
