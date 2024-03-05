@@ -36,6 +36,10 @@
 
 <app-game-info [card]="game.currentCard" class="pin-bottom"></app-game-info>
 
-<button mat-fab color="primary" (click)="openDialogAddPlayer()" class="btn-add">
+<button mat-fab color="primary" (click)="openDialogAddPlayer()" class="btn-add hide-mobile">
+    <mat-icon>add</mat-icon>
+</button>
+
+<button mat-fab color="primary" (click)="openDialogAddPlayer()" class="btn-add hide-desktop">
     <mat-icon>add</mat-icon>
 </button>
