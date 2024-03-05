@@ -4,6 +4,10 @@
 
 [Click here to play](ring-of-fire-tawny.vercel.app)
 
+## Mobile version
+
+![Preview](https://github.com/jasmin-raith/media/blob/main/ring-of-fire/Ring%20of%20fire%20mobile.gif?raw=true)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
