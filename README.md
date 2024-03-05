@@ -1,6 +1,8 @@
 # Ringoffire
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+![Preview](https://github.com/jasmin-raith/media/blob/main/ring-of-fire/Ring%20of%20fire.gif?raw=true)
+
+[Click here to play](ring-of-fire-tawny.vercel.app)
 
 ## Development server
 
